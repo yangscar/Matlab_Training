@@ -33,7 +33,7 @@ set(to_parse_file_list_box,'string',newstr);
 end
 
 function choose_file(~,~,dir_name_box)
-[FileName, PathName] = uigetfile('*.m','Get file Demo');
+[FileName, PathName] = uigetfile('*.m','Get file Demo','Multiselect','on');
 
 set(dir_name_box,'string',FileName);
 end
