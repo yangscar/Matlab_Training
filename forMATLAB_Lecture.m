@@ -29,8 +29,9 @@ B
 
 
 x = 0:0.1:4*pi;
-plot(x,sin(x));
-saveas(gca,'myPlot','fig');
+H=plot(x,sin(x));
+saveas(H,'myPlot','fig');
+%saveas(gca,'myPlot','fig');
 %% Timer part
 
 myTimer = timer();
