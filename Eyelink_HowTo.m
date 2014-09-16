@@ -11,9 +11,8 @@ EyelinkInit(dummymode, 1)
 
 % ????????
 Eyelink('Command', 'link_sample_data = LEFT,RIGHT,GAZE,PUPIL,AREA');
-Eyelink('Command', 'link_event_data = ?
-GAZE,GAZERES,HREF,AREA,VELOCITY?);
-Eyelink('command', 'link_event_filter = ?LEFT,RIGHT,FIXATION,BLINK,SACCADE,BUTTON?);
+Eyelink('Command', 'link_event_data = GAZE,GAZERES,HREF,AREA,VELOCITY');
+Eyelink('command', 'link_event_filter = LEFT,RIGHT,FIXATION,BLINK,SACCADE,BUTTON');
 % open file to record data to
 Eyelink('Openfile', file_name);
 
@@ -39,7 +38,7 @@ catch rdf
 end
 
 
-Eyelink(?Shutdown');
+Eyelink('Shutdown');
 % Restore keyboard output to Matlab:
 ListenChar(0);
 sca;
