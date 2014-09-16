@@ -21,6 +21,7 @@ load mySave.mat
 A
 B
 A = [A; [5 6]];
+%save('mySave.mat','A');
 save('mySave.mat','A','-append');
 clear all;
 load mySave.mat

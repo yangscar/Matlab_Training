@@ -6,8 +6,8 @@ window=Screen('OpenWindow', screenNumber);
 
 %% eye calibration
 el=EyelinkInitDefaults(window);
-
-EyelinkInit(dummymode, 1)
+dummy_mode = 1;
+EyelinkInit(dummy_mode);
 
 % ????????
 Eyelink('Command', 'link_sample_data = LEFT,RIGHT,GAZE,PUPIL,AREA');
@@ -22,14 +22,14 @@ EyelinkDoTrackerSetup(el);
 Eyelink('StartRecording');
 
 % ?????mark
-Eyelink('Message', ?write_what_u_like?);
+Eyelink('Message', 'write_what_u_like');
 
 % ??????
 Eyelink('CloseFile');
 
 % ????Eyelink???????
 try
-    status=Eyelink(?ReceiveFile',file_name);
+    status=Eyelink('ReceiveFile',file_name);
     if status > 0
         fprintf('ReceiveFile status %d\n', status);
     end

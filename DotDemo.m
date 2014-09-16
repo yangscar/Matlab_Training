@@ -1,4 +1,5 @@
 function DotDemo(showSprites, waitframes)
+Screen('Preference', 'SkipSyncTests', 1);
 %
 % dot motion demo using SCREEN('DrawDots') subfunction
 %
